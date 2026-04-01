@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <body onkeydown="k(event)" style="text-align: center">
+
+        <h2>Zmiana koloru</h2>
+
+        <button onclick="z('red','czerwony')" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">czerwony</button>
+        <button onclick="z('green','zielony')" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">zielony</button>
+        <button onclick="z('blue','niebieski')" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">niebieski</button>
+
+        <div id="i">wybrano kolor: brak</div>
+
+        <script>
+            function z(k,n){
+                document.body.style.backgroundColor=k;
+                document.getElementById("i").innerText="wybrano kolor: "+n;
+            }
+
+            function k(e){
+                if(e.key=="r")z('red','czerwony');
+                if(e.key=="g")z('green','zielony');
+                if(e.key=="b")z('blue','niebieski');
+
+            }
+        </script>
+    </body>
+</html>
